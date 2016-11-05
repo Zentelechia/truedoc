@@ -1,5 +1,5 @@
 Meteor.methods({
-move2ipfs: function(){
+move2ipfs: function(fileObj){
 	console.log(fileObj.path);
 
   var fs = Npm.require('fs');
