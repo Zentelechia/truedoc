@@ -1,7 +1,7 @@
 this.Docs = new FilesCollection({
   collectionName: 'Docs',
   storagePath: '~/data',
-  allowClientCode: false, // Disallow remove files from Client
+  allowClientCode: true, // Disallow remove files from Client
   onBeforeUpload: function (file) {
     return true;
     /*
