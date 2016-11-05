@@ -1,1 +1,1 @@
-Meteor.subscribe("docs.my");
+Meteor.subscribe("docs.my", Meteor.userId());
