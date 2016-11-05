@@ -1,6 +1,23 @@
 <template name="docs">
 <input id="search" placeholder="поиск по документам"><br>
+<table>
+	<thead>
+			<th>Название документа</th>
+			<th>Отправитель</th>
+			<th>Получатель</th>
+	</thead>		
 {{#each docs}}
-	<a href="https://ipfs.io/ipfs/{{hash}}">{{title}}</a><br>
+<tr>
+	<td>
+		<a href="https://ipfs.io/ipfs/{{hash}}">{{title}}</a><br>
+	<td>
+	<td>
+		{{user_id}}
+	</td>
+	<td>
+		{{to}}
+	</td>
+<tr>
 {{/each}}
+</table>
 </template>
