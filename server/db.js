@@ -10,20 +10,14 @@ var Docs = new FilesCollection({
     }
   },
   onAfterUpload: function(fileObj) {
-
     let reader = new FileReader();
     reader.onload = function(){
       let arrayBuffer = new Uint8Array(reader.result);
 
       Meteor.call("ipfsAdd", arrayBuffer, function(err, result){
         console.log("ipfs hash ",result);
-
-        );
-    };
+      });
+    }
     reader.readAsArrayBuffer(fileObj);
-
-
-});
-
-  }
+    }
 });
