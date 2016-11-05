@@ -25,5 +25,5 @@ Meteor.startup(function () {
   Meteor.publish('docs.my', function (user) {
 //    if (user==this.userId) {
     return Docs.find().cursor;
-   }
+   //}
  });
