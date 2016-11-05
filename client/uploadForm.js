@@ -20,7 +20,7 @@ Template.uploadForm.events({
         streams: 'dynamic',
         chunkSize: 'dynamic',
         meta: {
-     //     user_id: Meteor.userId(),
+          user_id: Meteor.userId(),
           title: title.value,
           description: description.value
         }

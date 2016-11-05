@@ -8,6 +8,7 @@ move2ipfs: function(fileObj){
      
      Meteor.call("ipfsAdd", data, function(err, result){
         console.log("ipfs hash ",result);
+        Docs.update(fileObj, {$set : {"meta.hash" : result}})
       });
     //    console.log(data);
 } 

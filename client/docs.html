@@ -1,5 +1,5 @@
 <template name="docs">
 {{#each docs}}
-	<a href="https://ipfs.io/ipfs/">{{this.meta.title}}</a>
+	<a href="https://ipfs.io/ipfs/{{this.meta.hash}}">{{this.meta.title}}</a><br>
 {{/each}}
 </template>
