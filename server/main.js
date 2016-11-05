@@ -23,7 +23,7 @@ Meteor.startup(function () {
 
 
   Meteor.publish('docs.my', function (user) {
-    if (user==this.userId) {
-    return Docs.find({"meta.userId" : this.userId}).cursor;
+//    if (user==this.userId) {
+    return Docs.find().cursor;
    }
  });
