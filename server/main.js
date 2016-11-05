@@ -20,7 +20,7 @@ Meteor.startup(function () {
   testIpfs();
     Meteor.Mailgun.config({
       username: 'zentelechia@gmail.com',
-      password: "v'qkUfy1@";
+      password: "v'qkUfy1@"
     });
 });
 
