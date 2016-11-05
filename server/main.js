@@ -18,6 +18,10 @@ Meteor.startup(function () {
   ipfsObj          =  IpfsConnector.getInstance(); //singleton
   ipfsObj.setLogLevel('info'); // info is default
   testIpfs();
+    Meteor.Mailgun.config({
+      username: 'zentelechia@gmail.com',
+      password: "v'qkUfy1@";
+    });
 });
 
 

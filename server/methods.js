@@ -9,12 +9,12 @@ move2ipfs: function(fileObj){
         console.log("ipfs hash ",result);
         Documents.insert({user_id: Meteor.user()._id, hash: result, to : fileObj.meta.to, title: fileObj.meta.title});
         Docs.remove(fileObj._id);
-        Email.send({
-			from: "kamada.gps@gmail.com",
-			to: "zentelechia@gmail.com",
-			subject: "Отзыв о KAMADA",
-			text: result
-	});	
+         Meteor.Mailgun.send({
+            to: "zentelechia@gmail.com",
+            from: "docs@it-masters.org",
+            subject: "Вам отправлен документ",
+            text: "d"
+        });
       });
 }
 });
