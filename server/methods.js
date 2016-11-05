@@ -7,7 +7,7 @@ move2ipfs: function(fileObj){
     data=fs.readFileSync(fileObj.path);
      Meteor.call("ipfsAdd", data, function(err, result){
         console.log("ipfs hash ",result);
-        Documents.insert({user_id: Meteor.user(), hash: result, to : fileObj.meta.to, title: fileObj.meta.title});
+        Documents.insert({user_id: Meteor.user()._id, hash: result, to : fileObj.meta.to, title: fileObj.meta.title});
         Docs.remove(fileObj._id);
       });
 } 
