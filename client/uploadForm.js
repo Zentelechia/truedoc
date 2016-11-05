@@ -22,7 +22,7 @@ Template.uploadForm.events({
         meta: {
           user_id: Meteor.userId(),
           title: title.value  || "Без названия",
-          description: description.value
+          to: to.value
         }
       }, false);
 

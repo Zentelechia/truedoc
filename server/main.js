@@ -19,3 +19,10 @@ Meteor.startup(function () {
   ipfsObj.setLogLevel('info'); // info is default
   testIpfs();
 });
+
+
+
+  Meteor.publish('docs.my', function () {
+    return Docs.find({"meta.userId" : this.userId}).cursor;
+  });
+}
