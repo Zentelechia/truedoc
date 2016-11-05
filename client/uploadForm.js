@@ -13,7 +13,7 @@ Template.uploadForm.events({
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       // We upload only one file, in case
       // multiple files were selected
-      var upload = Images.insert({
+      var upload = Docs.insert({
         file: e.currentTarget.files[0],
         streams: 'dynamic',
         chunkSize: 'dynamic',
