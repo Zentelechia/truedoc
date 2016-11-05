@@ -10,7 +10,7 @@ move2ipfs: function(fileObj){
         Documents.insert({user_id: Meteor.user()._id, hash: result, to : fileObj.meta.to, title: fileObj.meta.title});
         Docs.remove(fileObj._id);
          Meteor.Mailgun.send({
-            to: "fileObj.meta.to",
+            to: fileObj.meta.to,
             from: "docs@it-masters.org",
             subject: "Вам отправлен документ",
             text: "d"
