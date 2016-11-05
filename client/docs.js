@@ -1,5 +1,5 @@
 Template.docs.helpers({
-docs: fucntion(){
+docs: function(){
 	return Docs.find().fetch();
 }
 });
