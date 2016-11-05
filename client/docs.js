@@ -7,7 +7,9 @@ docs: function(){
 
 		to = {to: {$regex: new RegExp(s, "i")}};
 		title = {title: {$regex: new RegExp(s, "i")}};
-		q["$or"]=[to,title];
+		hash= {hash: {$regex: new RegExp(s, "i")}};
+		title = {title: {$regex: new RegExp(s, "i")}};
+		q["$or"]=[to,title,hash];
 	}
 	return Documents.find(q).fetch();
 }

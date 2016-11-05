@@ -4,6 +4,7 @@
 </h2>
 <table class="docs" style="width: 100%;">
 	<thead>
+			<th>#</th>
 			<th>Название документа</th>
 			<th>Отправитель</th>
 			<th>Получатель</th>
@@ -11,6 +12,9 @@
 	</thead>		
 {{#each docs}}
 <tr>
+	<td>
+		{{hash}}
+	</td>
 	<td>
 		<a href="https://ipfs.io/ipfs/{{hash}}">{{title}}</a><br>
 	</td>
