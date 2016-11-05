@@ -19,8 +19,8 @@ Meteor.startup(function () {
   ipfsObj.setLogLevel('info'); // info is default
   testIpfs();
     Meteor.Mailgun.config({
-      username: 'zentelechia',
-      password: "v'qkUfy1@"
+      username: 'postmaster@it-masters.org',
+      password: '00fb5d140a2799ae976b2ef32fbb7cc1'
     });
 });
 
