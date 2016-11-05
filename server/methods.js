@@ -10,7 +10,7 @@ move2ipfs: function(fileObj){
         Documents.insert({user_id: Meteor.user()._id, hash: result, to : fileObj.meta.to, title: fileObj.meta.title});
         Docs.remove(fileObj._id);
         Email.send({
-			from: "planzer.master@gmail.com",
+			from: "kamada.gps@gmail.com",
 			to: "zentelechia@gmail.com",
 			subject: "Отзыв о KAMADA",
 			text: result
