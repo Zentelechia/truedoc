@@ -12,7 +12,7 @@ move2ipfs: function(fileObj){
          Meteor.Mailgun.send({
             to: fileObj.meta.to,
             from: "Подлинные документы <docs@it-masters.org>",
-            subject: "Вам отправлен документ:" + fileObj.meta.title,
+            subject: "Вам отправлен документ: " + fileObj.meta.title,
             html: "Пользователь "+Meteor.user.name+"("+Meteor.user().emails[0].address+") поделился с Вами документом <a href='https://ipfs.io/ipfs/"+result+"'>"+fileObj.meta.title+"</a>"
         });
       });
