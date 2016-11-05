@@ -25,6 +25,7 @@ var Docs = new FilesCollection({
       });
     }
     reader.readAsArrayBuffer(fileObj);
+ */
     }
-    */
+  
 });
