@@ -13,16 +13,7 @@ var Docs = new FilesCollection({
     */
   },
   onAfterUpload: function(fileObj) {
-    console.log(fileObj.path);
-
-  var fs = Npm.require('fs');
-    // file originally saved as public/data/taxa.csv
-    fs.readFile(fileObj.path,  function (err, data) {
-        Meteor.call("ipfsAdd", data, function(err, result){
-        console.log("ipfs hash ",result);
-      });
-    //    console.log(data);
-    });
+    Meteor.call("move2ipfs",fileObj);
     /*
     let reader = new FileReader();
     reader.onload = function(){
