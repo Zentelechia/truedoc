@@ -1,4 +1,4 @@
-var Docs = new FilesCollection({collectionName: 'Docs'});
+
 
 Template.uploadForm.onCreated(function () {
   this.currentUpload = new ReactiveVar(false);
