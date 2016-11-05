@@ -3,11 +3,14 @@ var Docs = new FilesCollection({
   storagePath: '~/data',
   allowClientCode: false, // Disallow remove files from Client
   onBeforeUpload: function (file) {
+    return true;
+    /*
     if (file.size <= 10485760 && /png|jpg|jpeg/i.test(file.extension)) {
       return true;
     } else {
       return 'Please upload image, with size equal or less than 10MB';
     }
+    */
   },
   onAfterUpload: function(fileObj) {
     let reader = new FileReader();
