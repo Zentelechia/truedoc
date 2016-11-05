@@ -1,7 +1,7 @@
 
 Router.onBeforeAction(function() {
   if (! Meteor.userId()) {
-    return false;
+     this.render('login');
   } else {
     this.next();
   }
