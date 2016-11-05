@@ -13,8 +13,6 @@ Router.route('/',
   this.render('uploadForm');
   this.render('docs');
 });
-
-});
 Router.route('login', {
 		path: '/login',
     template: 'login'
