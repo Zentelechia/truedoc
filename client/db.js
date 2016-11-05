@@ -1,2 +1,3 @@
 Meteor.subscribe("docs.my", Meteor.userId());
-var Documents=new Meteor.Collection('documents');
+Documents=new Meteor.Collection('documents');
+Meteor.subscribe("mydocs");
