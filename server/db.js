@@ -1,4 +1,5 @@
 Documents=new Meteor.Collection('documents');
-Meteor.publish("mydocs", function(user){
-	return Documents.find({user_id: user});
+Meteor.publish("mydocs", function(user_id){
+	user=Meteor.users.findOne(user_id);
+	return Documents.find({$or: [{user_id: user._id},{to: user.emails.address});
 })
