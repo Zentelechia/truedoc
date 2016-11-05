@@ -24,5 +24,4 @@ Meteor.startup(function () {
 
   Meteor.publish('docs.my', function () {
     return Docs.find({"meta.userId" : this.userId}).cursor;
-  });
 }
