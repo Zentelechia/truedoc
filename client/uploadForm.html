@@ -1,7 +1,7 @@
 <template name="uploadForm">
 <div style="background-color: #EEE">
   {{#with currentUpload}}
-    <div style="width: 200px; height: 32px;  overflow: hidden; background-size: cover; background-repeat: repeat-x; background: url('../progbar.gif'); width: {{progress.get}}%">Загрузка {{progress.get}}%</div>
+    <div style="height: 32px;  overflow: hidden; background-size: cover; background-repeat: repeat-x; background: url('../progbar.gif'); width: {{progress.get}}%">Загрузка {{progress.get}}%</div>
   {{else}}
   	<input style="margin: 3px; width: 300px; text-align: center" id="title" placeholder="название документа" class="wide input"><br>
 	<input style="margin: 3px;  width: 300px; text-align: center" id="to" placeholder="email получателя" class="wide input"><br>
