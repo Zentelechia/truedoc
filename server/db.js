@@ -1,4 +1,4 @@
 Documents=new Meteor.Collection('documents');
-Meteor.publish("mydocs", function(){
-	return Documents.find({user_id: Meteor.user()._id});
+Meteor.publish("mydocs", function(user){
+	return Documents.find({user_id: user});
 })
