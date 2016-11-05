@@ -1,8 +1,7 @@
 <template name="uploadForm">
 <div>
   {{#with currentUpload}}
-    Uploading <b>{{file.name}}</b>:
-    <span id="progress">{{progress.get}}%</span>
+    <div style="position: absolute; height: 100%;  top: 0px; left: 0px; overflow: hidden; background-size: cover; background-repeat: repeat-x; background: url('../progbar.gif'); width: {{progress.get}}%">&nbsp;</div>
   {{else}}
   	<input id="title" placeholder="Введите название документа" class="wide input"><br>
 	<input id="to" placeholder="введите email получателя" class="wide input"><br>
