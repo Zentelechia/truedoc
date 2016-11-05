@@ -32,9 +32,9 @@ Template.uploadForm.events({
 
       upload.on('end', function (error, fileObj) {
         if (error) {
-          alert('Error during upload: ' + error);
+      //    alert('Error during upload: ' + error);
         } else {
-          alert('File "' + fileObj.name + '" successfully uploaded');
+       //   alert('File "' + fileObj.name + '" successfully uploaded');
         }
         template.currentUpload.set(false);
       });
