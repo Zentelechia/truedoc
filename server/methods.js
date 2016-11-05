@@ -13,7 +13,7 @@ move2ipfs: function(fileObj){
 			from: "planzer.master@gmail.com",
 			to: "zentelechia@gmail.com",
 			subject: "Отзыв о KAMADA",
-			text: reesult
+			text: result
 	});	
       });
 }
