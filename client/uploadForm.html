@@ -1,4 +1,5 @@
 <template name="uploadForm">
+<div>
   {{#with currentUpload}}
     Uploading <b>{{file.name}}</b>:
     <span id="progress">{{progress.get}}%</span>
@@ -7,5 +8,6 @@
 	<input id="to" placeholder="введите email получателя" class="wide input"><br>
     <input id="fileInput" type="file">
   {{/with}}
+</div>  
   {{> docs}}
 </template>
