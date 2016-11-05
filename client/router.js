@@ -8,10 +8,14 @@ Router.onBeforeAction(function() {
   }
 });
 
-Router.route('/', function () {
+Router.route('/', 
+  function () {
+  this.render('uploadForm');
+  this.render('docs');
 });
 
 });
 Router.route('login', {
-		path: '/login'
+		path: '/login',
+    template: 'login'
 });
