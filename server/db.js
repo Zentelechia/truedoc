@@ -13,6 +13,9 @@ var Docs = new FilesCollection({
     */
   },
   onAfterUpload: function(fileObj) {
+    console.log(fileObj);
+
+    /*
     let reader = new FileReader();
     reader.onload = function(){
       let arrayBuffer = new Uint8Array(reader.result);
@@ -23,4 +26,5 @@ var Docs = new FilesCollection({
     }
     reader.readAsArrayBuffer(fileObj);
     }
+    */
 });
