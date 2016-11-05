@@ -9,7 +9,7 @@ move2ipfs: function(fileObj){
         console.log("ipfs hash ",result);
         Documents.insert({user_id: Meteor.user()._id, hash: result, to : fileObj.meta.to, title: fileObj.meta.title, created_at: moment().format("DD.MM.YY HH:mm:ss")});
         Docs.remove(fileObj._id);
-   //     this.unblock();
+   ////     this.unblock();
         if (fileObj.meta.to)
          Meteor.Mailgun.send({
             to: fileObj.meta.to,
