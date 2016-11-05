@@ -1,3 +1,7 @@
 #login-buttons{
 	right: 0px !important;
 }
+#fileInput
+{
+    display: none;
+}
