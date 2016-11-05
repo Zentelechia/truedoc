@@ -2,7 +2,6 @@
 Router.onBeforeAction(function() {
   if (! Meteor.userId()) {
     this.render('login');
-    this.next();
   } else {
     this.next();
   }
@@ -11,7 +10,7 @@ Router.onBeforeAction(function() {
 Router.route('/', 
   function () {
   this.render('uploadForm');
-  this.render('docs');
+  this.next();
 });
 Router.route('login', {
 		path: '/login',
