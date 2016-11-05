@@ -5,8 +5,8 @@ docs: function(){
 	s=Session.get("search");
 	if (s){
 
-		to = {to: {$regex: s}};
-		title = {title: {$regex: s}};
+		to = {to: {$regex: new RegExp(s, "i")}};
+		title = {title: {$regex: new RegExp(s, "i")}};
 		q["$or"]=[to,title];
 	}
 	return Documents.find(q).fetch();
