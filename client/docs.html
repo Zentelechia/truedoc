@@ -4,7 +4,7 @@
 </h2>
 <table class="docs" style="width: 100%;">
 	<thead>
-			<th>Название документа</th>
+			<th>Hash документа</th>
 			<th>Отправитель</th>
 			<th>Получатель</th>
 			<th>Момент отправки</th>
@@ -12,7 +12,7 @@
 {{#each docs}}
 <tr>
 	<td>
-		<a href="https://ipfs.io/ipfs/{{hash}}">{{title}}</a><br>
+		<a href="https://ipfs.io/ipfs/{{hash}}">{{hash}}</a><br>
 	</td>
 	<td >
 		{{from}}
@@ -21,7 +21,7 @@
 		{{to}}
 	</td>
 	<td>
-		{{created_at}}
+		{{timestamp}}
 	</td>
 </tr>
 {{/each}}

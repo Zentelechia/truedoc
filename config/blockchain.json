@@ -1,0 +1,47 @@
+{
+  "development": {
+    "networkType": "custom",
+    "genesisBlock": "config/development/genesis.json",
+    "datadir": ".embark/development/datadir",
+    "mineWhenNeeded": true,
+    "nodiscover": true,
+    "rpcHost": "localhost",
+    "rpcPort": 8545,
+    "rpcCorsDomain": "http://localhost:8000",
+    "gas_limit": 3000000,
+    "gas_price": 3000000,
+    "account": {
+      "password": "config/development/password"
+    }
+  },
+  "testnet": {
+    "networkType": "testnet",
+    "networkId": 0,
+    "rpcHost": "localhost",
+    "rpcPort": 8545,
+    "rpcCorsDomain": "http://localhost:8000",
+    "console": true,
+    "account": {
+        "init": false,
+        "password": "/Users/mikefluff/password",
+	"address": "0x7f0Db315d9505ab5ff3d59f47163c7A1767f03Ff"
+    }  
+  },
+  "livenet": {
+    "networkType": "livenet",
+    "rpcHost": "localhost",
+    "rpcPort": 8545,
+    "rpcCorsDomain": "http://localhost:8000",
+    "account": {
+      "password": "config/production/password"
+    }
+  },
+  "privatenet": {
+    "networkType": "custom",
+    "rpcHost": "localhost",
+    "rpcPort": 8545,
+    "datadir": "yourdatadir",
+    "networkId": "123",
+    "nodes": []
+  }
+}

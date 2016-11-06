@@ -12,6 +12,11 @@ docs: function(){
 		q["$or"]=[to,title,hash];
 	}
 	return Documents.find(q).fetch();
+},
+timestamp: function() {
+    SimpleStorage.getTimeStamp(this.hash).then(function(value) {
+	return value;
+});
 }
 });
 Template.docs.events({

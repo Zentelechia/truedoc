@@ -27,3 +27,6 @@ accounts-password
 session
 ostrio:files
 cunneen:mailgun
+iron:router
+ethereum:web3
+coffeescript

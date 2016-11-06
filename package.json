@@ -5,6 +5,16 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
+    "child_process": "^1.0.2",
+    "embark": "^2.1.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "intercept-stdout": "^0.1.2",
+    "meteor-node-stubs": "^0.2.3",
+    "promisify-es6": "^1.0.2",
+    "ps-node": "^0.1.4",
+    "url": "^0.11.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }

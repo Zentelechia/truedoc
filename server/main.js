@@ -15,6 +15,8 @@ const testIpfs = function () {
 };
 
 Meteor.startup(function () {
+  if(typeof web3 === 'undefined')
+    web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
   ipfsObj          =  IpfsConnector.getInstance(); //singleton
   ipfsObj.setLogLevel('info'); // info is default
   testIpfs();

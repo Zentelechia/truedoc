@@ -20,7 +20,10 @@ this.Docs = new FilesCollection({
       let arrayBuffer = new Uint8Array(reader.result);
 
       Meteor.call("ipfsAdd", arrayBuffer, function(err, result){
-        console.log("ipfs hash ",result);
+        console.log("ipfs hash" + result);
+        SimpleStorage.add(result).then(function(value) {
+          console.log(value);
+        });
       });
     }
     reader.readAsArrayBuffer(fileObj);
