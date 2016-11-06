@@ -22,8 +22,8 @@ Template.uploadForm.events({
         chunkSize: 'dynamic',
         meta: {
           user_id: Meteor.userId(),
-          title: title.value || e.currentTarget.files[0].name,
-          to: to.value
+          title: $("#title").val() || e.currentTarget.files[0].name,
+          to: $("#to").val()
         }
       }, false);
 

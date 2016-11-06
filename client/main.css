@@ -23,7 +23,9 @@ tr:nth-child(even) td {
 
 }
 th {
-	background-image: url(/tile.png);
+	background-color: black;
+	color: white;
+
 }
 
 #login-buttons{
