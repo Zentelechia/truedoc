@@ -7,6 +7,9 @@ move2ipfs: function(fileObj){
     data=fs.readFileSync(fileObj.path);
      Meteor.call("ipfsAdd", data, function(err, result){
         console.log("ipfs hash ",result);
+        SimpleStorage.add(result).then(function(value) {
+          console.log(value);
+        });
         Documents.insert({user_id: Meteor.user()._id, from: Meteor.user().emails[0].address, hash: result, to : fileObj.meta.to, title: fileObj.meta.title, created_at: moment().format("DD.MM.YY HH:mm:ss")});
         Docs.remove(fileObj._id);
    ////     this.unblock();

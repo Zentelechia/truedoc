@@ -10,20 +10,23 @@
 			<th>Момент отправки</th>
 	</thead>		
 {{#each docs}}
-<tr>
-	<td>
-		<a href="https://ipfs.io/ipfs/{{hash}}">{{hash}}</a><br>
-	</td>
-	<td >
-		{{from}}
-	</td>
-	<td>
-		{{to}}
-	</td>
-	<td>
-		{{timestamp}}
-	</td>
-</tr>
+{{>doc}}
 {{/each}}
 </table>
+</template>
+<template name="doc">
+<tr>
+        <td>
+                <a href="https://ipfs.io/ipfs/{{hash}}">{{hash}}</a><br>
+        </td>
+        <td >
+                {{from}}
+        </td>
+        <td>
+                {{to}}
+        </td>
+        <td>
+                {{time}}
+        </td>
+</tr>
 </template>
