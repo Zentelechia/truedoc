@@ -1,10 +1,10 @@
 
 Template.docs.helpers({
 docs: function(){
-	q={};
+	var q={};
 	s=Session.get("search");
 	if (s){
-
+		console.log("s",s);
 		to = {to: {$regex: new RegExp(s, "i")}};
 		title = {title: {$regex: new RegExp(s, "i")}};
 		hash= {hash: {$regex: new RegExp(s, "i")}};

@@ -15,13 +15,14 @@ Template.uploadForm.events({
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       // We upload only one file, in case
       // multiple files were selected
+     // console.log(e.currentTarget.files[0]);
       var upload = Docs.insert({
         file: e.currentTarget.files[0],
         streams: 'dynamic',
         chunkSize: 'dynamic',
         meta: {
           user_id: Meteor.userId(),
-          title: title.value  || "Без названия",
+          title: title.value || e.currentTarget.files[0].name,
           to: to.value
         }
       }, false);

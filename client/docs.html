@@ -1,10 +1,9 @@
 <template name="docs">
 <h2>Реестр подлинных документов
-	<input style="text-align: center; border-radius: 5px; border: 1px solid blue; outline: none" id="search" placeholder="поиск">
+	<input style="text-align: center; border-radius: 5px; border: 1px solid blue; outline: none; width: 150px" id="search" placeholder="поиск по названию и hash">
 </h2>
 <table class="docs" style="width: 100%;">
 	<thead>
-			<th>#</th>
 			<th>Название документа</th>
 			<th>Отправитель</th>
 			<th>Получатель</th>
@@ -13,13 +12,10 @@
 {{#each docs}}
 <tr>
 	<td>
-		{{hash}}
-	</td>
-	<td>
 		<a href="https://ipfs.io/ipfs/{{hash}}">{{title}}</a><br>
 	</td>
 	<td >
-		{{user_id}}
+		{{from}}
 	</td>
 	<td>
 		{{to}}

@@ -1,5 +1,7 @@
 body {
-	padding: 5px;
+	margin: 5px;
+	font-size: 18px;
+	position: relative;
 }
 #login-buttons{
 	right: 0px !important;
@@ -10,4 +12,28 @@ body {
 }
 .docs td {
 	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+tr:nth-child(even) td {
+	background-color: #EEE;
+
+
+}
+th {
+	background-image: url(/tile.png);
+}
+
+#login-buttons{
+	position: relative;
+	right: 0px !important;
+	background-color: lightblue;
+}
+
+#login-dropdown-list {
+position: absolute;
+	right: -300px !important;
+	background-color: lightblue;	
 }
